@@ -32,5 +32,5 @@ jobs:
             ECR_REPOSITORY: ${{secrets.AWS_ECR_REPO}}
             IMAGE_TAG: latest
           run: |
-            docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-            docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+            docker build -t 512452245356.dkr.ecr.us-east-1.amazonaws.com/mybookstoreapp:$IMAGE_TAG .
+            docker push 512452245356.dkr.ecr.us-east-1.amazonaws.com/mybookstoreapp:$IMAGE_TAG
