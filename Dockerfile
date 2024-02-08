@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 4000
 
 # Command to run your GraphQL API when the container starts
-CMD ["npm", "start"]
+CMD ["serverless", "deploy"]
