@@ -30,7 +30,7 @@ jobs:
           env:
             ECR_REGISTRY: ${{ steps.login-pf-aws-ecr.outputs.registry }}
             ECR_REPOSITORY: ${{secrets.AWS_ECR_REPO}}
-            IMAGE_TAG: latest-${{ github.run_number }}
+            IMAGE_TAG: ${{ github.run_number }}
           run: |
             docker build -t 512452245356.dkr.ecr.us-east-1.amazonaws.com/mybookstoreapp:$IMAGE_TAG .
             docker push 512452245356.dkr.ecr.us-east-1.amazonaws.com/mybookstoreapp:$IMAGE_TAG
