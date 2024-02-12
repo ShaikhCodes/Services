@@ -7,7 +7,7 @@ jobs:
   React-Test:
    
   
-    name: Build Docker Image
+    name: Build Docker Image | Push to ECR and ECS
     runs-on: ubuntu-latest  
     steps:  
         - name: Checkout
