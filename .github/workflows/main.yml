@@ -34,3 +34,8 @@ jobs:
           run: |
             docker build -t 512452245356.dkr.ecr.us-east-1.amazonaws.com/mybookstoreapp:$IMAGE_TAG .
             docker push 512452245356.dkr.ecr.us-east-1.amazonaws.com/mybookstoreapp:$IMAGE_TAG
+
+        - name: Deploy to AWS ECS
+          id: deploy-ecs
+          run: |
+           aws ecs update-service --mybookstorecluster --service mybookstoreservice --force-new-deployment   
