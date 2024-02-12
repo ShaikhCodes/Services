@@ -38,4 +38,4 @@ jobs:
         - name: Deploy to AWS ECS
           id: deploy-ecs
           run: |
-           aws ecs update-service --mybookstorecluster --service mybookstoreservice --force-new-deployment   
+           aws ecs update-service --cluster mybookstorecluster --service mybookstoreservice --force-new-deployment   
